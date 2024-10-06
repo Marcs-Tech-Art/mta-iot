@@ -1,0 +1,81 @@
+{
+  "service": {
+    "init": {
+      "address": "0x18",
+      "svc": "i2c",
+      "driver": "adafruit_lis3dh",
+      "device": "LIS3DH_I2C"
+    },
+    "attr": {
+      "range": {
+        "adafruit_lis3dh": "RANGE_2_G"
+      }
+    }
+  },
+  "thing": {
+    "init": {
+      "id": "urn:dev:m2ag.labs.lis3dh",
+      "title": "--HOSTNAME--.lis3dh",
+      "type": [
+        "MultiLevelSensor"
+      ],
+      "description": "lis3dh"
+    },
+    "props": {
+      "x": {
+        "name": "x",
+        "value": [
+          "x",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "x",
+          "type": "number",
+          "multipleOf": 0,
+          "description": "X axis acceleration",
+          "readOnly": true
+        }
+      },
+      "y": {
+        "name": "y",
+        "value": [
+          "y",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "y",
+          "type": "number",
+          "multipleOf": 0,
+          "description": "Y axis acceleration",
+          "readOnly": true
+        }
+      },
+      "z": {
+        "name": "z",
+        "value": [
+          "z",
+          "None"
+        ],
+        "metadata": {
+          "@type": "LevelProperty",
+          "title": "z",
+          "type": "number",
+          "multipleOf": 0,
+          "description": "Z axis acceleration",
+          "readOnly": true
+        }
+      }
+    },
+    "poll": {
+      "members": [
+        "x",
+        "y",
+        "z"
+      ],
+      "poll_interval": 3000
+    }
+  },
+  "version": "beta 1.0"
+}

@@ -1,0 +1,35 @@
+{
+  "service": {
+    "init": {
+      "pin" : 13
+    },
+    "attr": {}
+  },
+  "thing": {
+    "init": {
+      "id": "urn:dev:m2ag.labs.alert",
+      "title": "--HOSTNAME--.alert",
+      "type": [
+        "Alarm"
+      ],
+      "description": "buzzer on pwm pin"
+    },
+    "props": {
+      "alarm": {
+        "name": "alarm",
+        "value": [
+          "alerting",
+          "alert"
+        ],
+        "metadata": {
+          "@type": "AlarmProperty",
+          "title": "Alarm",
+          "type": "boolean",
+          "description": "status of alert buzzer",
+          "readOnly": false
+        }
+      }
+    }
+  },
+  "version" : "beta 1.0"
+}
